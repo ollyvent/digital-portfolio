@@ -1,3 +1,39 @@
+.container{
+  display: grid;
+  grid-template-columns: 30% 70% ;
+  grid-template-rows: 40px 80px 150px 200px 40px  ;
+  grid-template-areas: 
+  'header header'
+  'hero-banner hero-banner' ;
+}
+
+.header{
+  grid-area: header;
+  background-color: rgb(112, 105, 95);
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.hero-banner{
+  grid-area: hero-banner;
+  background-image: url(../images/02-hero-bg.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  /* padding-right: 10px; */
+}
+
+.container .hero-banner h2{
+  background-color: rgb(92, 111, 105);
+  padding: 0 5px;
+  border-radius: 0 0 0 5px;
+}
+
+
+
+
 * {
   box-sizing: border-box;
 }
