@@ -1,19 +1,20 @@
 .container{
   display: grid;
-  grid-template-columns: 30% 70% ;
-  grid-template-rows: 40px 80px 150px 200px 40px  ;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 80px 200px 800px;
   grid-template-areas: 
   'header header'
-  'hero-banner hero-banner' ;
+  'hero-banner hero-banner'
+  'page-wrapper page-wrapper';
 }
 
 .header{
   grid-area: header;
-  background-color: rgb(112, 105, 95);
+  background-color: rgb(57, 61, 65);
   display: flex;
-  align-items: last baseline;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding-right: 10px;
 }
 
 .hero-banner{
@@ -26,12 +27,50 @@
 }
 
 .container .hero-banner h2{
-  background-color: rgb(92, 111, 105);
+  background-color: rgb(80, 147, 175);
   padding: 0 5px;
-  border-radius: 0 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  
+}
+
+.container .header h1{
+  background-color: rgb(80, 147, 175);
+  padding: 0 5px;
+  border-radius: 0 5px 5px 0;
+  
+}
+
+.page-wrapper{
+  grid-area: page-wrapper;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.about-me{
+  
+  display:grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: 
+  'about-heading about-content'
+  ;
+}
+
+.about-heading{
+  grid-area: about-heading;
 }
 
 
+.about-content{
+  grid-area: about-content;  
+}
+
+.my-work{
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas: ;
+}
 
 
 * {
@@ -52,6 +91,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  color: black;
 }
 
 p {
