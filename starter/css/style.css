@@ -1,6 +1,12 @@
         /* body/container */
 * {
   box-sizing: border-box;
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,7 +23,7 @@ h2{
   padding-right: 10px;  
 }
 
-h4{
+h4, .gym{
   align-items: flex-end;
   justify-content: start;
   background-color: rgb(80, 147, 175);
@@ -52,6 +58,7 @@ a:hover {
   'header header'
   'hero-banner hero-banner'
   'page-wrapper page-wrapper';
+  scroll-behavior: smooth;
 }
 
 
@@ -127,21 +134,23 @@ h1{
   grid-template-columns: 50% 50%;
   grid-template-rows: 500px 200px 200px;
   grid-template-areas:
-  'surf surf'
+  'gym gym'
   'led calc'
   'pastel buddy' ;
   gap: 10px;
   padding: 50px;
   margin: 10px;  
+  width: 100%;
 }
 
 .work-heading{
   grid-area: work-heading;  
 }
 
-.surf{
-  grid-area: surf;
-  background-image: url(../images/02-portfolio-4.jpg);
+.gym{
+  grid-area: gym;
+  background-image: url(../images/02-gym.jpg);  
+  
 }
 
 .led{
@@ -164,14 +173,49 @@ h1{
   background-image: url(../images/02-run-buddy.jpg);
 }
 
-.surf, .led, .calc, .pastel, .buddy {
+.gym, .led, .calc, .pastel, .buddy {
   border: 5px solid rgb(80, 147, 175);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;  
   display: flex;
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: steelblue;
 }    
+
+    /* work section hover effects */
+.gym:hover{
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: rgb(249, 249, 249);
+}
+
+.led:hover{
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: rgb(249, 249, 249);
+}
   
+.calc:hover{
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: rgb(249, 249, 249);
+}
+
+.pastel:hover{
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: rgb(249, 249, 249);
+}
+
+.buddy:hover{
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: rgb(249, 249, 249);
+}
+
+
 
 
         /* contact me */
@@ -193,7 +237,9 @@ h1{
   list-style-type: none;  
   padding: 50px;
   margin: 10px;
-}  
+} 
+
+
   
 
 
