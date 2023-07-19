@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -21,7 +21,7 @@ h6 {
 
 p {
   margin: 0;
-}
+} */
 
 
 .container{
@@ -51,21 +51,19 @@ p {
   justify-content: end;
   /* padding-right: 10px; */
   background-size: cover;
-
 }
 
-.container .hero-banner h2{
+h3{
   background-color: rgb(80, 147, 175);
-  padding: 0 5px;
+  padding: 0 35px;
   border-radius: 5px 0 0 5px;
-  
+  font-size: 25px;  
 }
 
-.container .header h1{
+h1{
   background-color: rgb(80, 147, 175);
-  padding: 0 5px;
-  border-radius: 0 5px 5px 0;
-  
+  padding: 0 35px;
+  border-radius: 0 5px 5px 0;  
 }
 
 .page-wrapper{
@@ -90,23 +88,30 @@ p {
 
 
 .about-content{
-  grid-area: about-content; 
-  border-left: solid rgb(80, 147, 175) 5px; 
+  grid-area: about-content;   
   padding: 50px;
   margin: 10px;
 }
 
 .my-work{
   display: grid;
-  grid-template-columns: 30% 35% 35%;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: 
+  'work-heading work-cards';
+
+}
+
+.work-cards{
+  display: grid;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 500px 200px 200px;
   grid-template-areas:
-  'work-heading surf surf'
-  'work-heading led calc'
-  'work-heading pastel buddy' ;
+  'surf surf'
+  'led calc'
+  'pastel buddy' ;
   gap: 10px;
   padding: 50px;
-  margin: 50px;
+  margin: 10px;
   
 }
 
@@ -158,8 +163,7 @@ p {
   grid-area: contact-content;
   justify-self: start;
   align-self: center;
-  list-style-type: none;
-  border-left: solid rgb(80, 147, 175) 5px; 
+  list-style-type: none;  
   padding: 50px;
   margin: 10px;
 }
@@ -170,6 +174,7 @@ h2{
   font-size: 50px;
   padding-right: 10px;
   
+  
 }
 
 .surf, .led, .calc, .pastel, .buddy {
@@ -177,26 +182,42 @@ h2{
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;  
-  display: flex;
-  
-  
+  display: flex;  
+  background: rgba(39,62,84,0.5);
+  z-index: 2;
   
   
 }
 
-.container .page-wrapper .my-work h3{
+h4{
   align-items: flex-end;
-  justify-content: end;
+  justify-content: start;
   background-color: rgb(80, 147, 175);
+  padding: 0 0 50px 10px;
+  font-size: 20px;  
   
 }
 
-nav, li{
-  font-size: 20px;
-  font-weight: 50px;
-  /* display: flex;
-  justify-content: space-between; */
+a:hover {
+  color: rgb(72, 84, 254);
+  font-size: 30px;
 }
+
+
+.about-content, .work-cards, .contact-content{
+  border-left: solid rgb(80, 147, 175) 5px; 
+}
+
+a{
+  color: rgb(80, 147, 175);
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+
 
 
 
